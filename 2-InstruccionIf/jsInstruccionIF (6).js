@@ -1,5 +1,6 @@
 function mostrar()
 {
+
 //tomo la edad  
 
 var edad
@@ -16,10 +17,19 @@ if (edad >= 18)
 else
 
 {
-    if (edad > 13 && edad < 17)
+    if (edad >= 13 && edad <= 17) {
+
+        alert ("es adolescente")
+    }
+    else {
+
+        alert("es menor")
+    }
+
+}
 
 
 
+}
 
-
-}//FIN DE LA FUNCIÓN
+//FIN DE LA FUNCIÓN
