@@ -4,7 +4,7 @@ function mostrar()
 
 var edad = document.getElementById("edad").value;
 
-if(edad >= "18") {
+if(edad >= 18) {
 
     alert ("La persona es mayor de edad")
 
