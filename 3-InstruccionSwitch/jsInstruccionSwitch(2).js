@@ -7,13 +7,13 @@ var mesDelAño = document.getElementById('mes').value;
         case"Julio":
         case"Agosto":
         alert("Abrigate que hace frio");
-        break
+        break;
         case"Septiembre":
         case"Octubre":
         case"Noviembre":
         case"Diciembre":
         alert("Ya paso el frio ahora el calor");
-        break
+        break;
         default:
         alert("Falta para el invierno");
     }

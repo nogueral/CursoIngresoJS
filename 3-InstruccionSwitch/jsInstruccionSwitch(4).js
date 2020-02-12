@@ -14,10 +14,10 @@ var mesDelAño = document.getElementById("mes").value;
         case"Octubre":
         case"Diciembre":
         alert("Este mes tiene 31 dias");
-        break
+        break;
         case"Febrero":
         alert("Este mes tiene 28 dias");
-        break
+        break;
         default:
         alert("Este mes tiene 30 dias");
     }
