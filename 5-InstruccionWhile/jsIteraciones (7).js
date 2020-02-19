@@ -7,28 +7,26 @@ function mostrar()
 	var numeroIngresado;
 	var promedio;
 	
-	while (prompt("Desea ingresar un numero?")) {
-		if (respuesta.toLowerCase() == "si") { 
-			do { 
+	while(prompt("Desea ingresar un número?")) {
 
-			numeroIngresado=prompt("Ingrese un numero");
-			numeroIngresado=parseInt(numeroIngresado);
-			contador=contador+1;  }
-			
-			while (isNaN(numeroIngresado))  }
+	do {
 
-			 }
-			 
+		if (respuesta.toLocaleLowerCase() == "si") {
+
+			numeroIngresado = prompt("Ingrese un número");
+			numeroIngresado = parseInt(numeroIngresado);
+			contador = contador + 1;
+		}
+	}	while (isNaN(numeroIngresado))
+		
 		acumulador=acumulador+numeroIngresado;
 		promedio=acumulador/contador;
 
+}
 
-		document.getElementById('suma').value=acumulador;
-		document.getElementById('promedio').value=promedio;
-
-		console.log (acumulador, contador);
-
-
+	document.getElementById('suma').value=acumulador;
+	document.getElementById('promedio').value=promedio; 
+	
 /*	while(prompt("Desea ingresar un numero?")) {
 
 		if (respuesta.toLowerCase() == "si") {
@@ -53,7 +51,7 @@ function mostrar()
 
 
 document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=promedio; */
+document.getElementById('promedio').value=promedio;  */
 
 }
 
