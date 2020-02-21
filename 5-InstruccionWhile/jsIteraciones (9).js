@@ -5,46 +5,45 @@ function mostrar()
 	// declarar variables
 	
 	var respuesta='si';
-	var numeroIngresado=prompt("Ingrese un numero");
+	var numeroIngresado;
 	var primeraVez;
 	var maximo;
 	var minimo;
 	
- 
-	
 
-	while(confirm("Desea ingresar un numero?")) {
+	while(prompt("Desea ingresar un numero?")) {
 		
-		contador=contador+1;
-		numeroIngresado = prompt("Ingrese un numero");
-		numeroIngresado = parseInt(numeroIngresado);
+		if(respuesta.toLowerCase() == "si") { 
+		
+			contador=contador+1;
+			numeroIngresado = prompt("Ingrese un numero");
+			numeroIngresado = parseInt(numeroIngresado);
 		
 
-		while(isNaN(numeroIngresado)){
+			while(isNaN(numeroIngresado)){
 
-		numeroIngresado = prompt("Ingrese un numero");
-		numeroIngresado = parseInt(numeroIngresado);
-		}
+			numeroIngresado = prompt("Ingrese un numero");
+			numeroIngresado = parseInt(numeroIngresado);
+			}
+
+		}	
 	
 		console.info(numeroIngresado);
 
-		if(primeraVez)	{
-			primeraVez = false
+		if(primeraVez == false)	{
 		
 			maximo = numeroIngresado;
 			minimo = numeroIngresado;
-		} else {
 
-			if (numeroIngresado > maximo) {
+		} else if (numeroIngresado > maximo) {
 
 				maximo = numeroIngresado;
-			}
-			if (numeroIngresado < minimo) {
+			
+		} else if (numeroIngresado < minimo) {
 
 				minimo = numeroIngresado;
 			}
 
-	}
 	
 	}
 

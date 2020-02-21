@@ -11,12 +11,13 @@ function mostrar()
 
 	do {
 
-		if (respuesta.toLocaleLowerCase() == "si") {
+		if (respuesta.toLowerCase() == "si") {
 
 			numeroIngresado = prompt("Ingrese un número");
 			numeroIngresado = parseInt(numeroIngresado);
 			contador = contador + 1;
-		}
+		} 
+		
 	}	while (isNaN(numeroIngresado))
 		
 		acumulador=acumulador+numeroIngresado;
