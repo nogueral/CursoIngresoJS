@@ -3,17 +3,16 @@ function mostrar()
 
 	var contador=0;
 	var acumulador=0;
-	var numeroIngresado = prompt ("Ingrese número");
+	var numeroIngresado;
 
 	while (contador < 5) { 
 
 	do { 
 
 	numeroIngresado = prompt("Ingrese número");
-
 	numeroIngresado = parseInt(numeroIngresado);
-	acumulador = parseInt(acumulador);
 	acumulador = acumulador + numeroIngresado;
+	
 	contador=contador+1;
 
 	} while(isNaN(numeroIngresado));
@@ -23,7 +22,8 @@ function mostrar()
 		console.log(acumulador);
 
 	document.getElementById('suma').value=acumulador;
-	document.getElementById('promedio').value=acumulador/5;
+	document.getElementById('promedio').value=acumulador/contador; // Promedios y porcentajes calcular afuera
+
 
 /*while(contador < 5) {
 
