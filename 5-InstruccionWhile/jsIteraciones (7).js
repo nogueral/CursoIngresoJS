@@ -3,25 +3,25 @@ function mostrar()
 
 	var contador=0;
 	var acumulador=0;
-	var respuesta='si';
+	var respuesta=true;
 	var numeroIngresado;
 	var promedio;
 	
-	while(prompt("Desea ingresar un número?")) {
+	while(respuesta==true) {
 
 	do {
 
-		if (respuesta.toLowerCase() == "si") {
-
-			numeroIngresado = prompt("Ingrese un número");
-			numeroIngresado = parseInt(numeroIngresado);
-			contador = contador + 1;
-		} 
+	numeroIngresado = prompt("Por favor, ingrese un número");
+	numeroIngresado = parseInt(numeroIngresado);
+	console.log(numeroIngresado);
 		
 	}	while (isNaN(numeroIngresado))
-		
+
+		contador = contador + 1;
 		acumulador=acumulador+numeroIngresado;
 		promedio=acumulador/contador;
+
+	respuesta=confirm("Desea ingresar otro numero?");
 
 }
 

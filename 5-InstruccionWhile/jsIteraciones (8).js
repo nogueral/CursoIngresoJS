@@ -1,10 +1,7 @@
 function mostrar()
 {
-
-	var contador=0;
 	var positivo=0;
 	var negativo=1;
-	var acumulador=0;
 	var numeroIngresado;
 
 
@@ -12,9 +9,9 @@ function mostrar()
 
 		do  {
 
-			contador = contador + 1;
 			numeroIngresado = prompt("Ingrese número");
 			numeroIngresado = parseInt(numeroIngresado);
+			console.log(numeroIngresado);
 		
 		} while (isNaN(numeroIngresado))
 

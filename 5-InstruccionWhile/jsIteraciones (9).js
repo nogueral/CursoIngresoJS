@@ -9,11 +9,48 @@ function mostrar()
 	var maximo;
 	var minimo;
 
+
+	while(respuesta==true) { 
+
+		do {
+			numero = prompt("Ingrese un numero: ");
+			numero = parseInt(numero);
+	
+		} while(isNaN(numero))
+
+		console.log(numero);
+
+
+		if (flag==true) {
+			maximo=numero;
+			minimo=numero;
+			flag=false;
+
+		} else if (numero>maximo){
+			maximo=numero;
+
+		} else if (numero<minimo) {
+			minimo=numero;
+		}
+		
+
+		respuesta = confirm("Desea ingresar otro numero?");
+	}
+
+
+
+/*
 	while(respuesta==true) 
 	{
 		numero = prompt("Ingrese un numero: ");
 		numero = parseInt(numero);
 
+		while(isNaN(numero)) {
+
+			numero = prompt("Error! Por favor, ingrese un numero valido: ");
+			numero = parseInt(numero);
+		}
+ 
 		/*Maximos y Minimos con contador
 		
 		if(contador==0)
@@ -39,7 +76,7 @@ function mostrar()
 
 		/*Maximos y minimos con flag*/
 
-			if(flag == true || numero>maximo)
+		/*	if(flag == true || numero>maximo)
 			{
 				maximo = numero;
 			}
@@ -52,51 +89,14 @@ function mostrar()
 		
 		flag=false;
 
-		respuesta = confirm("Desea ingresar otro numero?: ");
+		respuesta = confirm("Desea ingresar otro numero?: "); 
 		
 		/*Se asigna variable true a respuesta y se lo valida con confirm*/
 		/*respuesta = respuesta.toLowerCase(); 
-		para validar la respuesta en mayuscula o minuscula*/
+		para validar la respuesta en mayuscula o minuscula
 		
-	}
-
-	
-/*
-	while(prompt("Desea ingresar un numero?")) {
-		
-		if(respuesta.toLowerCase() == "si") { 
-		
-			contador=contador+1;
-			numeroIngresado = prompt("Ingrese un numero");
-			numeroIngresado = parseInt(numeroIngresado);
-		
-
-			while(isNaN(numeroIngresado)){
-
-			numeroIngresado = prompt("Ingrese un numero");
-			numeroIngresado = parseInt(numeroIngresado);
-			}
-
-		}	
-	
-		console.info(numeroIngresado);
-
-		if(primeraVez == false)	{
-		
-			maximo = numeroIngresado;
-			minimo = numeroIngresado;
-
-		} else if (numeroIngresado > maximo) {
-
-				maximo = numeroIngresado;
-			
-		} else if (numeroIngresado < minimo) {
-
-				minimo = numeroIngresado;
-			}
-
-	
 	} */
+
 
 	
 

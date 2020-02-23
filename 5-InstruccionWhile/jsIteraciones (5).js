@@ -1,13 +1,16 @@
+/*Al presionar el botón pedir 
+un sexo 'f' para femenino, 'm' para masculino.*/
+
 function mostrar()
 {
 
-var sexo = prompt("ingrese f ó m .");
+var sexo = prompt("Ingrese F o M");
 
 
 while(sexo.toLowerCase() != "m" && sexo.toLowerCase() != "f") {
 
-    sexo = prompt("Ingrese F o M");
-
+    
+    sexo = prompt("Error! Por favor ingrese F o M");
     
 }
 
