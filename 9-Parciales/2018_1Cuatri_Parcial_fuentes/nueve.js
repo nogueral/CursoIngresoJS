@@ -15,30 +15,61 @@ function mostrar()
     var marca;
     var peso;
     var temperatura;
+    var restoTemp;
+    var contadorTempPar=0;
+    var flag=true;
+    var pesoMax=0;
+    var marcaMax;
+    var contador=0;
+    
 
     while(respuesta==true) {
        
-        marca = prompt("Ingrese marca del producto:");
+        marca = prompt("Ingrese marca del producto:");   
         peso = prompt("Ingrese peso del producto: ");
         peso = parseInt(peso);
 
-            while(peso < 1 || peso > 100) {
+            while(peso < 1 || peso > 100 || isNaN(peso)) {
 
                 peso = prompt("El peso debe estar comprendido entre 1 y 100kg. Ingrese peso: ");
                 peso = parseInt(peso);
             }
+
+        if (flag==true) {
+            marcaMax = marca; 
+            pesoMax = peso; 
+            flag = false;
+             
+        }   else if (peso > pesoMax) {
+            marcaMax = marca;
+            pesoMax = peso;      
+        } 
+         
         temperatura = prompt("Ingrese temperatura de almacenamiento: ");
         temperatura = parseInt(temperatura);
+        
 
-            while(temperatura < -30 || temperatura > 30) {
+            while(temperatura < -30 || temperatura > 30 || isNaN(temperatura)) {
 
                 temperatura = prompt("La temperatura debe estar comprendida entre -30°C y 30°C. Ingrese temperatura: ");
                 temperatura = parseInt(temperatura);
             }
-    
+        
+        if (temperatura < 0) {
+            contador++;
+        }
+        
+        restoTemp = temperatura % 2;
+       
+        if(restoTemp==0) {
+            contadorTempPar++;
+        }
+        
+
     
         respuesta = confirm("Desea ingresar otro producto: ");
              
     }
 
+    console.log(contador);
 }
