@@ -19,8 +19,12 @@ function mostrar()
     var contadorTempPar=0;
     var flag=true;
     var pesoMax=0;
+    var pesoMin=0;
     var marcaMax;
     var contador=0;
+    var acumulador=0;
+    var promedio;
+    var contadorPeso=0;
     
 
     while(respuesta==true) {
@@ -34,16 +38,24 @@ function mostrar()
                 peso = prompt("El peso debe estar comprendido entre 1 y 100kg. Ingrese peso: ");
                 peso = parseInt(peso);
             }
+        
+        contadorPeso++;
+        acumulador = acumulador + peso;
 
         if (flag==true) {
             marcaMax = marca; 
             pesoMax = peso; 
+            pesoMin = peso;
             flag = false;
              
         }   else if (peso > pesoMax) {
             marcaMax = marca;
             pesoMax = peso;      
-        } 
+        
+        }   else if (peso < pesoMin) {
+            pesoMin = peso;
+
+        }
          
         temperatura = prompt("Ingrese temperatura de almacenamiento: ");
         temperatura = parseInt(temperatura);
@@ -65,11 +77,16 @@ function mostrar()
             contadorTempPar++;
         }
         
-
-    
         respuesta = confirm("Desea ingresar otro producto: ");
              
     }
 
-    console.log(contador);
+    promedio = acumulador / contadorPeso;
+ 
+    document.write("a- La cantidad de temperaturas pares es: "+ contadorTempPar + "<br>",
+    "b- La marca del producto mas pesado es: "+ marcaMax + "<br>",
+    "c- La cantidad de productos que se conservan a menos de 0 grados es: "+ contador + "<br>",
+    "d- El promedio de peso de todos los productos es: "+ promedio + "<br>",
+    "e- El peso maximo es: "+ pesoMax + " y el peso minimo: "+ pesoMin + "<br>");
+    
 }
