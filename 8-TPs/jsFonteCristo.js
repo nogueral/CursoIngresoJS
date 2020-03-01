@@ -1,4 +1,5 @@
-/*El departamento de NUMEROS ESPECIALES  del instituto matemático  FonteCristo  nos está pidiendo una aplicación que verifique las distintas cualidades de los números.
+/*El departamento de NUMEROS ESPECIALES  del instituto matemático  FonteCristo 
+ nos está pidiendo una aplicación que verifique las distintas cualidades de los números.
 
 13.	Para cada una de estas acciones  debemos realizar la lógica para verificar las cualidades pedidas:
 a.	Se pedirán un número positivo y se mostrará la cantidad de números pares
@@ -143,7 +144,7 @@ function NumerosPrimos ()
     var numeroIngresado;
     var divisor=2;
     var primo=true;
-    var contador;
+    var contador=0;
 
     numeroIngresado = document.getElementById("numero").value; 
     numeroIngresado = parseInt(numeroIngresado);
@@ -156,25 +157,17 @@ function NumerosPrimos ()
     
     console.log(numeroIngresado);
 
-    contador = numeroIngresado + 1;
-    
-        while (contador > 0) { 
-        contador = contador -1;
-        
-            while (contador > divisor) {
-
-                if (contador % divisor == 0) {
-                primo=false;
-                divisor++;
-                }
+    while (divisor < numeroIngresado) {
+       
+        if (numeroIngresado % divisor == 0) {
+            primo=false;
+        } else {
+            contador++;
         }
 
-        if (primo==true) {
-
-            console.log("El numero: " + contador + " es primo");
-   
-        } 
-
+        divisor++;
+        
     }
 
+    console.log("La cantidad de numeros primos es: " + contador);
 }
