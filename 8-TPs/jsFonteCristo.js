@@ -120,7 +120,7 @@ function VerificarPrimo ()
     
     console.log(numeroIngresado);
     
-    while (divisor < numeroIngresado) {
+    while (divisor <= numeroIngresado) {
 
         if (numeroIngresado % divisor == 0) {
             primo=false;
@@ -144,7 +144,7 @@ function NumerosPrimos ()
     var numeroIngresado;
     var divisor=2;
     var primo=true;
-    var contador=0;
+    var contadorPrimos=0;
 
     numeroIngresado = document.getElementById("numero").value; 
     numeroIngresado = parseInt(numeroIngresado);
@@ -156,18 +156,29 @@ function NumerosPrimos ()
     }
     
     console.log(numeroIngresado);
+  
+    while (numeroIngresado > 0) {
 
-    while (divisor < numeroIngresado) {
+        while (divisor <= numeroIngresado) {
+
+            if (numeroIngresado % divisor == 0) {
+                primo=false;
+             }
+    
+             divisor++;
+        }
+    
+        if (primo==true) {
+    
+            console.log("El numero: " + numeroIngresado + " es primo");
        
-        if (numeroIngresado % divisor == 0) {
-            primo=false;
         } else {
-            contador++;
+    
+            console.log("El numero: " + numeroIngresado + " no es primo");      
         }
 
-        divisor++;
-        
+        numeroIngresado = numeroIngresado - 1;
     }
 
-    console.log("La cantidad de numeros primos es: " + contador);
+    console.log(contadorPrimos);
 }
