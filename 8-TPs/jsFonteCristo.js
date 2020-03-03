@@ -14,11 +14,25 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
 */
 function ComenzarIngreso () 
 {
- 	
+ 	/*
+     var numero // declararla fuera de la funcion
+
+     numero = document.getElementById("numero").value;
+     numero = parseInt(numero);
+
+     while (isNaN(numero) || numero <= 0) {
+
+     numero = prompt("Ingrese un numero positivo");
+     numero = parseInt(numero);
+
+     }
+
+     */
 }
 
 function NumerosPares ()
 {
+  
     var numeroIngresado;
     var contador;
     var resto;
@@ -26,7 +40,7 @@ function NumerosPares ()
     numeroIngresado = document.getElementById("numero").value; 
     numeroIngresado = parseInt(numeroIngresado);
     
-    while (numeroIngresado < 0) {
+    while (numeroIngresado < 1) {
         numeroIngresado = prompt("Error! ingrese un numero mayor a 0: ");
         numeroIngresado = parseInt(numeroIngresado);
         document.getElementById("numero").value = numeroIngresado;
@@ -44,6 +58,13 @@ function NumerosPares ()
                 console.log("El numero es: "+contador);
             }          
          } 
+  /*
+    ComenzarIngreso () // se llama a esta funcion
+
+ */
+
+
+
 }
 
 function NumerosImpares ()
@@ -137,14 +158,38 @@ function VerificarPrimo ()
 
         console.log("El numero: " + numeroIngresado + " no es primo");      
     }
+
+
+    /*
+            var contador = 0; 
+
+        while (contador <= numeroIngresado) {
+            
+
+            if (numeroIngresado % contador == 0) {
+                contadorDivisibles++;
+            }
+            contador++;
+
+             }
+
+            if (contadorDivisibles == 2) {
+                alert("el numero es primo")
+            } else {
+                alert ("El numero no es primo");
+            }
+       
+
+
+    */
 }
 
 function NumerosPrimos () 
 {
     var numeroIngresado;
-    var divisor=2;
-    var primo=true;
-    var contadorPrimos=0;
+    var contador=1;
+    var contadorPrimos=2;
+    var noEsPrimo=false;
 
     numeroIngresado = document.getElementById("numero").value; 
     numeroIngresado = parseInt(numeroIngresado);
@@ -156,8 +201,25 @@ function NumerosPrimos ()
     }
     
     console.log(numeroIngresado);
-  
-    while (numeroIngresado > 0) {
+ /* 
+while (contador <= numeroIngresado) {
+    
+    while(contadorPrimos < contador) {
+
+        if (contador % contadorPrimos == 0) {
+            noEsPrimo=true;
+            break
+        }
+        contadorPrimos++;
+    }
+    contador++;
+
+}
+
+*/
+
+
+ /*   while (numeroIngresado > 0) {
 
         while (divisor <= numeroIngresado) {
 
@@ -180,5 +242,5 @@ function NumerosPrimos ()
         numeroIngresado = numeroIngresado - 1;
     }
 
-    console.log(contadorPrimos);
+    console.log(contadorPrimos);*/
 }

@@ -18,19 +18,20 @@ function mostrar()
     var contadorVarones=0;
     var sexoMin;
 
-    while(contador < 5) {
+    while (contador < 5) {
         nota = prompt("Ingrese nota: "); 
         nota = parseInt(nota);
         
-        while(isNaN(nota)) {
-            nota = prompt("Error! Ingrese un valor numérico: ");
+        while (isNaN(nota) || nota > 10 || nota < 0) {
+            nota = prompt("Error! Ingrese un valor numérico entre 0 y 10: ");
             nota = parseInt(nota);
         }
         sexo = prompt("Ingrese sexo F o M: ");
         sexo = sexo.toLowerCase(sexo);
 
-        if (sexo != "f" && sexo != "m") {
+        while (sexo != "f" && sexo != "m") {
             sexo = prompt("Error! Por favor, ingrese F o M: ");
+            sexo = sexo.toLowerCase(sexo);
         }
         contador++;    
         
@@ -39,22 +40,23 @@ function mostrar()
         }
         
         acumulador = nota + acumulador;
-        promedio = acumulador / contador;
 
-        if (flag == true) {
+        if (flag == true) { // se puede utilizar if (contador == 1) porque es la 1a iteracion
             minimo = nota;
             sexoMin = sexo
             flag = false;
             
-        } else if(nota < minimo) {
+        } else if (nota < minimo) {
             minimo = nota;
             sexoMin = sexo
         }
 
     }
   
+    promedio = acumulador / contador;
+    
     alert("El promedio de las notas totales es: " + promedio);
-    alert ("La nota mas baja es: " + minimo +" y el sexo: "+ sexoMin);
+    alert ("La nota mas baja es: " + minimo +" y el sexo de esa persona: "+ sexoMin);
     alert("La cantidad de varones con nota mayor o igual a 6 es: " + contadorVarones);
 
 }
