@@ -7,25 +7,30 @@ y mostrar la cantidad de numeros pares encontrados.
 function mostrar()
 {
 
-    var contador=0;
+    var contador=1;
     var contadorPares=0;
     var pares;
 
     for(var numero = prompt("Ingrese numero"); contador <= numero; contador++) {
 
         numero = parseInt(numero);
-        pares = numero;
+       
+        if(contador % 2 == 0) {
 
-        if (pares%2==0) {
             contadorPares++;
-            pares=pares-1;
+            pares=true;
+       
+        } else {
+            pares=false;
         }
 
-    console.log(contadorPares);
-
+        if (pares==true) {
+            
+            console.log(contador);
+        }
 
     }
 
-    
+    console.log(contadorPares, numero);
 
 }//FIN DE LA FUNCIÓN
