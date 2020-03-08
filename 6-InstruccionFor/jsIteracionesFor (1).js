@@ -6,12 +6,12 @@ al presionar el botón mostrar 10 repeticiones con números ASCENDENTE, desde el
 function mostrar()
 {
     
-    for (var contador=0; contador < 10; contador++); {
+    for (var contador=0; contador < 10; contador++) {
 
-           console.log(contador);
+           
         
     }
 
-
+    document.write("El numero es: " + contador);
 
 }
